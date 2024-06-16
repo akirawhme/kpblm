@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #f0f0f0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Путь к фоновому изображению */
+    background-size: cover;
+}
+
+.target {
+    position: absolute;
+    width: 100px; /* Размеры цели в пикселях */
+    height: 100px;
+    background-image: url('target.png'); /* Путь к изображению-мишени */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    z-index: 1; /* Чтобы цель была выше фона */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1; /* Чтобы убедиться, что цель изначально видна */
+}
+
+
+
